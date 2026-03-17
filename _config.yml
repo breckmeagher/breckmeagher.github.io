@@ -1,5 +1,5 @@
 # Setup
-title: @breckmeagher
+title: "@breckmeagher"
 url: https://breckmeagher.github.io
 paginate: 1
 baseurl: ""
@@ -32,9 +32,9 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Mark Otto
-  url: https://twitter.com/mdo
-  email: markdotto@gmail.com
+  name: Breck Meagher
+  url: https://breckmeagher.github.io
+  email: breckmeagher@gmail.com
 
 # Custom vars
 version: 3.0.0
