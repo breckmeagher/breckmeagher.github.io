@@ -3,7 +3,7 @@
 // Styles for managing the structural hierarchy of the site.
 
 .container {
-  max-width: 45rem;
+  max-width: 67rem;
   padding-left: var(--spacer-2);
   padding-right: var(--spacer-2);
   margin-left:  auto;
@@ -13,4 +13,103 @@
 footer {
   margin-top: var(--spacer-3);
   margin-bottom: var(--spacer-3);
+}
+
+
+// Bio section
+.bio {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.bio-img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.bio-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.bio-content p {
+  margin: 0;
+}
+
+.bio-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.bio-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  line-height: 1;
+}
+
+.bio-links img {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+// Responsive
+@media (max-width: 600px) {
+  .bio {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bio-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .bio-img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+
+
+
+// Adding stuff for the home page
+.sections-container {
+  display: flex;
+  gap: var(--spacer-3);
+  margin-bottom: var(--spacer-3);
+
+  // Projects column ~2x wider than Education
+  .projects {
+    flex: 2;
+  }
+
+  .education {
+    flex: 1;
+  }
+
+  // Responsive: stack on mobile
+  @media (max-width: 800px) {
+    flex-direction: column;
+
+    .projects,
+    .education {
+      flex: unset;
+      width: 100%;
+    }
+  }
+}
+
+.publications {
+  margin-top: var(--spacer-3);
 }

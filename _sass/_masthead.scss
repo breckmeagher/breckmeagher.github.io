@@ -6,6 +6,9 @@
   padding-top: var(--spacer);
   padding-bottom: var(--spacer);
   margin-bottom: var(--spacer-3);
+
+  /* Add thin line below the header */
+  border-bottom: 1px solid var(--border-color);
 }
 
 .masthead-title {
@@ -24,7 +27,24 @@
 
 // Navbar styles
 .nav {
-  float: right;
-  line-height: 1.25rem;
-  word-spacing: 1rem;
+  display: flex;           // arrange links in a row
+  gap: 0.75rem;               // space between each link
+  align-items: center;     // vertically align with site title
+}
+
+.nav a {
+  color: var(--body-color);  // default gray for unclicked links
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: var(--body-color);  // white or whatever your page text is
+  }
+}
+
+.nav a.active {
+  font-weight: 700;        // bold for active page
+  color: var(--body-color); // white (or highlight color)
 }

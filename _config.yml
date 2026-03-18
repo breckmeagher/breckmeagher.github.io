@@ -42,7 +42,6 @@ version: 3.0.0
 # Navbar page list
 nav:
   - title: Projects
-    url: /projects
-
+    url: /projects/
   - title: About
-    url: /about
+    url: /about/

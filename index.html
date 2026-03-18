@@ -3,40 +3,93 @@ layout: default
 title: Home
 ---
 
-<!-- Bio section -->
-<section class="bio" style="display: flex; align-items: center; margin-bottom: 2rem;">
-  <img src="/assets/pfp_kagra.jpg" alt="Breck Meagher" style="width: 150px; height: 150px; border-radius: 50%; margin-right: 1.5rem;">
-  <div class="bio-text">
-    <h1>Hello, I'm Breck Meagher</h1>
-    <p>I'm a web developer, blogger, and tinkerer. I love writing about tech, coding, and sharing projects. Welcome to my personal site!</p>
+<section class="bio">
+  <!-- Profile Image -->
+  <img src="/assets/pfp_kagra.jpg" alt="Breck Meagher" class="bio-img">
+
+  <!-- Text + links container -->
+  <div class="bio-content">
+    <p>
+      Hello! I'm <b>Breck Meagher</b>, an experimental physics PhD student at the
+      <a href="https://gravitationalwaves.syracuse.edu/" target="_blank" rel="noopener">
+        <span class="link-text">Syracuse University Center for Gravitational Wave Astronomy and Astrophysics.</span>
+      </a> 
+      My research focuses on developing technology for future gravitational wave detectors and ultra-high power laser systems.
+    </p>
+
+    <div class="bio-links">
+      <a href="https://orcid.org/0009-0009-0293-3406" target="_blank" rel="noopener">
+        <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID">
+        <span class="link-text">ORCID</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/breckmeagher" target="_blank" rel="noopener">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/3840px-LinkedIn_icon.svg.png" alt="LinkedIn">
+        <span class="link-text">LinkedIn</span>
+      </a>
+
+      <a href="https://github.com/breckmeagher" target="_blank" rel="noopener">
+        <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png" alt="GitHub">
+        <span class="link-text">GitHub</span>
+      </a>
+    </div>
   </div>
 </section>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<!-- Information -->
+<div class="sections-container">
+  <!-- Projects -->
+  <section class="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-entry">
+      <h3 class="entry-title">Ultra-High Power Photoneutralization Cavity</h3>
+      <p class="entry-description">We're building an ultra-high power optical cavity for neutral
+				beam injection in tokamak fusion reactors. I work on the cavity design, and our vacuum system.
+			</p>
+    </div>
+    <div class="project-entry">
+      <h3 class="entry-title">Nonuniform Birefringence in GaAs/AlGaAs Optical Coatings</h3>
+      <p class="entry-description">We mapped birefringence in AlGaAs optical coatings across
+				the entire coating surface. I made improvements to the experiment design and worked out
+				the mathematical analysis using Jones calculus.</p>
+    </div>
+    <div class="project-entry">
+      <h3 class="entry-title">Characterization of Defects on Crystalline Optical Coatings</h3>
+      <p class="entry-description">I systematically studied AlGaAs optical coating surfaces using Scanning 
+				Election Microscopy in collaboration with the Stanford LIGO group.</p>
+    </div>
+		<div class="project-entry">
+      <h3 class="entry-title">Bathymetric LiDAR in Non-Ideal Aquatic Environments</h3>
+      <p class="entry-description">We explored the attenuation and scattering characteristics of various visible 
+				spectrum lasers within simulated oceanic environments.</p>
+    </div>
+  </section>
 
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-
-    {{ post.content }}
-  </article>
-  {% endfor %}
+  <!-- Education -->
+  <section class="education">
+    <h2 class="section-title">Education</h2>
+    <div class="edu-entry">
+      <h3 class="entry-title">
+  			PhD Physics <span class="entry-description">(2024-Present)</span>
+			</h3>
+      <p class="entry-description" style="color: var(--heading-color);">Syracuse University</p>
+			<p class="entry-description" style="margin-top: 0; margin-bottom: 0.25rem;"><i>Syracuse, NY</i></p>
+    </div>
+    <div class="edu-entry">
+      <h3 class="entry-title">
+  			BS Space Physics <span class="entry-description">(2020-2024)</span>
+			</h3>
+      <p class="entry-description" style="color: var(--heading-color);">Embry-Riddle Aeronautical University</p>
+			<p class="entry-description" style="margin-top: 0; margin-bottom: 0.25rem;"><i>Prescott, AZ</i></p>
+    </div>
+  </section>
 </div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">Newer</a>
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+<!-- Publications -->
+<section class="publications">
+  <h2 class="section-title">Publications</h2>
+  <ul>
+    <p class="entry-description"><i>I'm working on it!</i> =^._.^=</p>
+
+  </ul>
+</section>
